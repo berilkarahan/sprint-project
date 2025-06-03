@@ -1,6 +1,6 @@
 package com.project.step_definitions;
 
-import com.project.pages.LoginPage;
+import com.project.pages.FinaSystemsLoginPage;
 import com.project.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
 
@@ -28,12 +28,12 @@ public class LoginStepDefs {
             password = ConfigurationReader.getProperty("store_manager_password");
         }
         //send username and password and login
-        new LoginPage().login(username,password);
+        new FinaSystemsLoginPage().login(username,password);
     }
 
     @Given("the user logged in with username as {string} and password as {string}")
     public void the_user_logged_in_with_username_as_and_password_as(String username, String password) {
-        LoginPage loginPage=new LoginPage();
+        FinaSystemsLoginPage loginPage=new FinaSystemsLoginPage();
         loginPage.login(username,password);
     }
 }
