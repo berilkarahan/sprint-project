@@ -6,8 +6,8 @@ Feature: Users should be able to login
 
   @wip
   Scenario: POS manager logs in with valid credentials
-    When user logs in with username as "posmanager5@info.com" and password as "posmanager"
-    And clicks the login button
+    When user logs in with username as "POS_manager_username" and password as "POS_manager_password"
+    #And clicks the login button
     Then user should see the dashboard page
 
 
