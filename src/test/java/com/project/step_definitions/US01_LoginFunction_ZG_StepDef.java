@@ -20,11 +20,10 @@ public class US01_LoginFunction_ZG_StepDef {
     }
 
     @When("user logs in with username as {string} and password as {string}")
-    public void user_logs_in_with_username_as_and_password_as(String string, String string2) {
+    public void user_logs_in_with_username_as_and_password_as(String username, String password) {
 
         loginPage = new FinaSystemsLoginPage();
-        loginPage.login(ConfigurationReader.getProperty("POS_manager_username"),
-                ConfigurationReader.getProperty("POS_manager_password"));
+        loginPage.login(username,password);
 
     }
 
