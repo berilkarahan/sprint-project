@@ -21,15 +21,23 @@ public class FinaSystemsLoginPage {
     @FindBy(id="password")
     public WebElement password;
 
-    @FindBy(xpath="//button[.='Log in']")
+    @FindBy(xpath="//button[text()='Log in']")
     public WebElement submit;
 
 
-    public void login(String userNameStr, String passwordStr) {
+   /* public void login(String userNameStr, String passwordStr) {
         userName.sendKeys(userNameStr);
         password.sendKeys(passwordStr + Keys.ENTER);
         //submit.click();
         // verification that we logged
-    }
+    }*/
 
+
+
+    public void login(String userNameStr, String passwordStr) {
+        userName.sendKeys(userNameStr);
+        password.sendKeys(passwordStr );
+        submit.click();
+        // verification that we logged
+    }
 }
