@@ -13,7 +13,12 @@ public class FinaSystemInventoryPage {
 
     }
 
-//    @FindBy(xpath = "//a[span[normalize-space()='Inventory']]")
-//    public WebElement inventoryButton;
+    @FindBy(xpath = "//a[span[normalize-space()='Inventory']]")
+    public WebElement inventoryButton;
+
+
+    @FindBy(partialLinkText = "Product")
+    public WebElement productsMenu;
+
 
 }
