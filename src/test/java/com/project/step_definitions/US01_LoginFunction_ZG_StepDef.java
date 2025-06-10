@@ -12,12 +12,12 @@ public class US01_LoginFunction_ZG_StepDef {
 
     FinaSystemsLoginPage loginPage;
 
-    @Given("The user is on the login page")
-    public void the_user_is_on_the_login_page() {
-
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-
-    }
+//    @Given("The user is on the login page")
+//    public void the_user_is_on_the_login_page() {
+//
+//        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+//
+//    }
 
     @When("user logs in with username as {string} and password as {string}")
     public void user_logs_in_with_username_as_and_password_as(String username, String password) {
