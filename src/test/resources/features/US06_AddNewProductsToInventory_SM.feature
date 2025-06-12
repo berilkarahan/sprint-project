@@ -7,7 +7,11 @@ Feature: Inventory Management
   Scenario Outline: Add a new product to the inventory
     Given The user logs in using "<username>" and "<password>"
     And The user navigate to the Inventory page
-    Then The user navigate to the product page
+    And The user navigate to the product page
+    And The user click on the Create button
+    And User enter valid product information
+    And User click on the save button
+    #Then User should see the new product in the inventory list
 
 
     Examples:
@@ -15,3 +19,4 @@ Feature: Inventory Management
       | posmanager5@info.com   | posmanager |
       | posmanager60@info.com  | posmanager |
       | posmanager125@info.com | posmanager |
+
