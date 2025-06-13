@@ -27,17 +27,26 @@ public class FinaSystemInventoryPage {
     @FindBy(xpath = "//input[@placeholder='Product Name']")
     public WebElement productNameBox;
 
-    @FindBy(id = "o_field_input_483")
+    @FindBy(xpath = "//input[@name='default_code']")
     public WebElement internalReferenceBox;
 
-    @FindBy(id = "o_field_input_485")
+    @FindBy(xpath = "//input[@id='o_field_input_486']")
     public WebElement salesPriceBox;
 
-    @FindBy(id = "o_field_input_489")
+    @FindBy(xpath = "//input[@id='o_field_input_490']")
     public WebElement costBox;
 
     @FindBy(xpath = "//button[normalize-space()='Save']")
     public WebElement saveButton;
+
+    @FindBy(xpath = "(//span[text()='Electrical Car'])[1]")
+    public WebElement selectProduct;
+
+    @FindBy(xpath = "//button[normalize-space()='Edit']")
+    public WebElement editButton;
+
+
+
 
 
 }

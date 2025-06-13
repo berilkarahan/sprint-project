@@ -65,7 +65,7 @@ public class US06_AddNewProduct_SM_StepDef {
     public void userClickOnTheSaveButton() {
 
        wait.until(ExpectedConditions.elementToBeClickable(finaSystemInventoryPage.saveButton));
-              finaSystemInventoryPage.saveButton.click();
+       finaSystemInventoryPage.saveButton.click();
 
     }
 
@@ -75,6 +75,41 @@ public class US06_AddNewProduct_SM_StepDef {
 //
 //
 //    }
+
+
+    @When("the user selects a product from the list")
+    public void the_user_selects_a_product_from_the_list() {
+
+       wait.until(ExpectedConditions.elementToBeClickable(finaSystemInventoryPage.selectProduct));
+       finaSystemInventoryPage.selectProduct.click();
+
+    }
+
+    @When("the user clicks the edit button")
+    public void the_user_clicks_the_edit_button() {
+
+        wait.until(ExpectedConditions.elementToBeClickable(finaSystemInventoryPage.editButton));
+        finaSystemInventoryPage.editButton.click();
+
+    }
+
+    @When("the user edits product information")
+    public void the_user_edits_product_information() {
+
+        finaSystemInventoryPage.productNameBox.clear();
+        finaSystemInventoryPage.productNameBox.sendKeys("Electrical Cars");
+//        finaSystemInventoryPage.internalReferenceBox.sendKeys("Mr. Ali");
+//        finaSystemInventoryPage.salesPriceBox.clear();
+//        finaSystemInventoryPage.salesPriceBox.sendKeys("18,500.00");
+//        finaSystemInventoryPage.costBox.clear();
+//        finaSystemInventoryPage.costBox.sendKeys("13,000.00");
+        finaSystemInventoryPage.saveButton.click();
+
+    }
+
+
+
+
 
 
 }
